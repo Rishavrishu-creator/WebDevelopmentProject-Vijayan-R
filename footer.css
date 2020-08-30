@@ -99,8 +99,9 @@ section {
 .footer-distributed .footer-right p{
 	display: inline-block;
 	vertical-align: top;
-	margin: 15px 42px 0 0;
+	margin: 7px -74px 0 0;
 	color: #ffffff;
+	font-size: 21px;
 }
 
 /* The contact form */
@@ -140,12 +141,14 @@ section {
 .footer-distributed :-ms-input-placeholder{
 	color:  #5c666b;
 }
+.footer-distributed form input {
+    height: 53px;
+    margin-bottom: 16px;
+    margin-top: 50px;
+    margin-right: 71px;
 
-
-.footer-distributed form input{
-	height: 55px;
-	margin-bottom: 15px;
 }
+
 
 .footer-distributed form textarea{
 	height: 100px;
@@ -160,5 +163,6 @@ section {
 	padding: 15px 50px;
 	font-weight: bold;
 	float: right;
+	margin-right: 69px;
 }
 
