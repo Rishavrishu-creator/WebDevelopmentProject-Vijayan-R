@@ -11,10 +11,19 @@
 
     <title>Hello, world!</title>
     <link rel="stylesheet" href="footer.css">
+    <script type="text/javascript">
+        function scaleUp(obj, size) {
+            obj.style.fontSize = size;
+        }
+    </script>
     <style>
         * {
             margin: 0px;
             padding: 0px;
+        }
+        
+        html {
+            scroll-behavior: smooth;
         }
         
         .disp {
@@ -29,8 +38,9 @@
         }
         
         .card {
-            width: 100%;
+            width: 98%;
             height: 20em;
+            padding: 10px 10px;
         }
         
         .card-img {
@@ -40,7 +50,8 @@
         }
         
         .jumbo1 {
-            box-shadow: 2px 12px 2px 2px skyblue;
+            box-shadow: 10px 10px 10px palevioletred;
+            margin: 10px;
         }
         
         .img {
@@ -68,13 +79,143 @@
             padding: 60px;
         }
         
-        .nav-link:hover {
-            background-color: turquoise;
-            border-radius: 25px;
+        nav {
+            background-image: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.11) 0px, rgba(0, 0, 0, 0.11) 12px, rgba(1, 1, 1, 0.16) 12px, rgba(1, 1, 1, 0.16) 24px, rgba(0, 0, 0, 0.14) 24px, rgba(0, 0, 0, 0.14) 36px, rgba(0, 0, 0, 0.23) 36px, rgba(0, 0, 0, 0.23) 48px, rgba(0, 0, 0, 0.12) 48px, rgba(0, 0, 0, 0.12) 60px, rgba(1, 1, 1, 0.07) 60px, rgba(1, 1, 1, 0.07) 72px, rgba(0, 0, 0, 0.21) 72px, rgba(0, 0, 0, 0.21) 84px, rgba(0, 0, 0, 0.24) 84px, rgba(0, 0, 0, 0.24) 96px, rgba(1, 1, 1, 0.23) 96px, rgba(1, 1, 1, 0.23) 108px, rgba(1, 1, 1, 0.07) 108px, rgba(1, 1, 1, 0.07) 120px, rgba(0, 0, 0, 0.01) 120px, rgba(0, 0, 0, 0.01) 132px, rgba(1, 1, 1, 0.22) 132px, rgba(1, 1, 1, 0.22) 144px, rgba(1, 1, 1, 0.24) 144px, rgba(1, 1, 1, 0.24) 156px, rgba(0, 0, 0, 0) 156px, rgba(0, 0, 0, 0) 168px, rgba(0, 0, 0, 0.12) 168px, rgba(0, 0, 0, 0.12) 180px), repeating-linear-gradient(90deg, rgba(1, 1, 1, 0.01) 0px, rgba(1, 1, 1, 0.01) 12px, rgba(1, 1, 1, 0.15) 12px, rgba(1, 1, 1, 0.15) 24px, rgba(0, 0, 0, 0.09) 24px, rgba(0, 0, 0, 0.09) 36px, rgba(0, 0, 0, 0.02) 36px, rgba(0, 0, 0, 0.02) 48px, rgba(0, 0, 0, 0.1) 48px, rgba(0, 0, 0, 0.1) 60px, rgba(1, 1, 1, 0.07) 60px, rgba(1, 1, 1, 0.07) 72px, rgba(1, 1, 1, 0.15) 72px, rgba(1, 1, 1, 0.15) 84px, rgba(0, 0, 0, 0.18) 84px, rgba(0, 0, 0, 0.18) 96px, rgba(1, 1, 1, 0.15) 96px, rgba(1, 1, 1, 0.15) 108px, rgba(1, 1, 1, 0.09) 108px, rgba(1, 1, 1, 0.09) 120px, rgba(1, 1, 1, 0.07) 120px, rgba(1, 1, 1, 0.07) 132px, rgba(1, 1, 1, 0.05) 132px, rgba(1, 1, 1, 0.05) 144px, rgba(0, 0, 0, 0.1) 144px, rgba(0, 0, 0, 0.1) 156px, rgba(1, 1, 1, 0.18) 156px, rgba(1, 1, 1, 0.18) 168px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.24) 0px, rgba(0, 0, 0, 0.24) 16px, rgba(1, 1, 1, 0.06) 16px, rgba(1, 1, 1, 0.06) 32px, rgba(0, 0, 0, 0.16) 32px, rgba(0, 0, 0, 0.16) 48px, rgba(1, 1, 1, 0) 48px, rgba(1, 1, 1, 0) 64px, rgba(1, 1, 1, 0.12) 64px, rgba(1, 1, 1, 0.12) 80px, rgba(1, 1, 1, 0.22) 80px, rgba(1, 1, 1, 0.22) 96px, rgba(0, 0, 0, 0.24) 96px, rgba(0, 0, 0, 0.24) 112px, rgba(0, 0, 0, 0.25) 112px, rgba(0, 0, 0, 0.25) 128px, rgba(1, 1, 1, 0.12) 128px, rgba(1, 1, 1, 0.12) 144px, rgba(0, 0, 0, 0.18) 144px, rgba(0, 0, 0, 0.18) 160px, rgba(1, 1, 1, 0.03) 160px, rgba(1, 1, 1, 0.03) 176px, rgba(1, 1, 1, 0.1) 176px, rgba(1, 1, 1, 0.1) 192px), repeating-linear-gradient(135deg, rgba(1, 1, 1, 0.18) 0px, rgba(1, 1, 1, 0.18) 3px, rgba(0, 0, 0, 0.09) 3px, rgba(0, 0, 0, 0.09) 6px, rgba(0, 0, 0, 0.08) 6px, rgba(0, 0, 0, 0.08) 9px, rgba(1, 1, 1, 0.05) 9px, rgba(1, 1, 1, 0.05) 12px, rgba(0, 0, 0, 0.01) 12px, rgba(0, 0, 0, 0.01) 15px, rgba(1, 1, 1, 0.12) 15px, rgba(1, 1, 1, 0.12) 18px, rgba(0, 0, 0, 0.05) 18px, rgba(0, 0, 0, 0.05) 21px, rgba(1, 1, 1, 0.16) 21px, rgba(1, 1, 1, 0.16) 24px, rgba(1, 1, 1, 0.07) 24px, rgba(1, 1, 1, 0.07) 27px, rgba(1, 1, 1, 0.23) 27px, rgba(1, 1, 1, 0.23) 30px, rgba(0, 0, 0, 0.2) 30px, rgba(0, 0, 0, 0.2) 33px, rgba(0, 0, 0, 0.18) 33px, rgba(0, 0, 0, 0.18) 36px, rgba(1, 1, 1, 0.12) 36px, rgba(1, 1, 1, 0.12) 39px, rgba(1, 1, 1, 0.13) 39px, rgba(1, 1, 1, 0.13) 42px, rgba(1, 1, 1, 0.2) 42px, rgba(1, 1, 1, 0.2) 45px, rgba(1, 1, 1, 0.18) 45px, rgba(1, 1, 1, 0.18) 48px, rgba(0, 0, 0, 0.2) 48px, rgba(0, 0, 0, 0.2) 51px, rgba(1, 1, 1, 0) 51px, rgba(1, 1, 1, 0) 54px, rgba(0, 0, 0, 0.03) 54px, rgba(0, 0, 0, 0.03) 57px, rgba(1, 1, 1, 0.06) 57px, rgba(1, 1, 1, 0.06) 60px, rgba(1, 1, 1, 0) 60px, rgba(1, 1, 1, 0) 63px, rgba(0, 0, 0, 0.1) 63px, rgba(0, 0, 0, 0.1) 66px, rgba(1, 1, 1, 0.19) 66px, rgba(1, 1, 1, 0.19) 69px), linear-gradient(90deg, rgb(239, 53, 115), rgb(79, 2, 93));
         }
         
-        .nav-link {
-            color: bisque;
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: montserrat;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        nav {
+            /* background: #000000; */
+            height: 80px;
+            width: 100%;
+        }
+        /*label.logo{
+  color: white;
+  font-size: 35px;
+  
+}*/
+        
+        nav ul {
+            float: right;
+            margin-right: 20px;
+            text-decoration: none;
+        }
+        
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+            text-decoration: none;
+        }
+        
+        nav ul li a {
+            color: white;
+            font-size: 17px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        
+        .nava.active,
+        .nava:hover {
+            background: #1b9bff;
+            transition: .5s;
+            color: whitesmoke;
+        }
+        
+        .checkbtn {
+            font-size: 30px;
+            color: white;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+        
+        #check {
+            display: none;
+        }
+        
+        @media (max-width: 952px) {
+            label.logo {
+                font-size: 30px;
+                padding-left: 50px;
+            }
+            nav ul li a {
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 858px) {
+            .checkbtn {
+                display: block;
+            }
+            ul {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #2c3e50;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+            nav ul li {
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+            nav ul li a {
+                font-size: 20px;
+            }
+            .nava:hover,
+            .nava.active {
+                background: none;
+                color: #0082e6;
+            }
+            #check:checked~ul {
+                left: 0;
+            }
+        }
+        
+        section {
+            background: url(bg1.jpg) no-repeat;
+            background-size: cover;
+            height: calc(100vh - 80px);
+        }
+        
+        label.logo {
+            font-size: 35px;
+            /* color: chartreuse; */
+            background-size: 42px 42px;
+            color: cornsilk;
+            /* -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; */
+            line-height: 80px;
+            padding: 0 100px;
+            font-weight: bold;
+        }
+        
+        .card {
+            box-shadow: 10px 10px 10px pink;
+            margin: 50px 20px;
+            padding: 5px 20px;
+            border: 2px solid plum;
         }
     </style>
 
@@ -96,63 +237,33 @@
 <!--End of Tawk.to Script-->
 
 <body>
-    <div style="font-size: 22px;">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog/blog.html">Blog</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              NGOS
-            </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="ngopages/HelpAgeIndia.html">Help Age India</a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="donation/basic.html">Donate</a>
-                    </li>
-                    <li class="nav-item" style="transition:3s;">
-                        <a class="nav-link" href="#fact">Reach</a>
-                    </li>
-                </ul>
 
 
-                <form class="form-inline my-2 my-lg-0">
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+        <label onmouseover="scaleUp(this,'50px')" onmouseout="scaleUp(this,'40px')" class="logo">WeCARE</label>
+        <ul>
+            <li><a class="active nava" href="index.html" style="text-decoration: none;">Home</a></li>
+            <li><a href="ngopages/HelpAgeIndia.html" class="nava" style="text-decoration: none;">NGOs</a></li>
+            <li><a href="blog/blog.html" class="nava" style="text-decoration: none;">Blog</a></li>
+            <li><a href="cart/shoppingindex.html" class="nava" style="text-decoration: none;">Products(Covid)</a></li>
+            <li><a href="donation/basic.html" class="nava" style="text-decoration: none;">Donate</a></li>
+            <li><a href="#fact" class="nava" id="reach" style="text-decoration: none;">Reach</a></li>
+            <li><a href="signlog.html" class="nava" style="text-decoration: none;">SignUp/Login </a></li>
 
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    <div style="margin: 5px 5px;">
-                        <li class="form-control mr-sm-3">
-                            <a href="signlog.html">Signup/Login</a>
-                        </li>
-                    </div>
-                </form>
-            </div>
-        </nav>
-    </div>
 
-
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" ;>
+        </ul>
+    </nav>
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" style="top: -15px;">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
             <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
         </ol>
-        <div class="carousel-inner" style="height: 613px;">
+        <div class="carousel-inner" style="height: 650px;">
             <div class="carousel-item active">
                 <img src="img/pic8.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-solid d-md-block">
@@ -256,10 +367,12 @@
             </div>
         </div>
     </div>
+    <br>
+
 
 
     <div class="jumbotron jumbotron-fluid jumbo2" id="fact">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6">
                     <h1 class="display-4">Fluid jumbotron</h1>
@@ -297,25 +410,25 @@
 
             <div class="footer-left">
 
-                <h3>We<span>CARE</span></h3>
+                <h3>Company<span>logo</span></h3>
 
                 <p class="footer-links">
                     <a href="#">Home</a> ·
                     <a href="#">Blog</a> ·
-                    <a href="#">NGOsg</a> ·
-                    <a href="#">Reach</a> ·
+                    <a href="#">Pricing</a> ·
+                    <a href="#">About</a> ·
                     <a href="#">Faq</a> ·
-                    
+                    <a href="#">Contact</a>
                 </p>
 
-                <p class="footer-company-name">WeCARE © 2020</p>
+                <p class="footer-company-name">Company Name © 2020</p>
 
                 <div class="footer-icons">
 
-                    <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-                    <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                    <a href="https://github.com/"><i class="fa fa-github"></i></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
 
                 </div>
 
@@ -351,5 +464,11 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $("#reach").click(function() {
+        $("#fact").slideUp(2000).slideDown(3000);
+    })
+</script>
 
 </html>
