@@ -28,13 +28,16 @@
         
         .disp {
             text-align: center;
+            font-family: auto;
         }
         
         .text1 {
             text-align: center;
-            background-color: aquamarine;
-            color: red;
+            background-color: antiquewhite;
+            /* color: red; */
             font-size: 25px;
+            box-shadow: 10px 10px 10px pink;
+            font-family: cursive;
         }
         
         .card {
@@ -63,7 +66,7 @@
         
         .vLine {
             display: inline-block;
-            border-left: 6px solid rgb(128, 0, 128);
+            border-left: 6px solid yellowgreen;
             height: 76px;
             margin-left: 5%;
         }
@@ -78,6 +81,7 @@
             height: auto;
             margin: 118px -4px;
             padding: 60px;
+            border-radius: 50px;
         }
         
         nav {
@@ -241,7 +245,7 @@
 <body>
 
 
-    <nav>
+    <nav class="fixed-top">
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
@@ -259,7 +263,7 @@
 
         </ul>
     </nav>
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" style="top: -15px;">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" style="top: 81px;">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
