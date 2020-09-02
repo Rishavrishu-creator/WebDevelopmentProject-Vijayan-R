@@ -37,7 +37,7 @@
             background-color: antiquewhite;
             /* color: red; */
             font-size: 25px;
-            box-shadow: 10px 10px 10px pink;
+            /* box-shadow: 10px 10px 10px pink; */
             font-family: cursive;
         }
         
@@ -138,7 +138,8 @@
         
         .nava.active,
         .nava:hover {
-            background: #1b9bff;
+            /* background: #1b9bff; */
+            background-image: linear-gradient(to right top, #ff05f2, #ff00b9, #ff0083, #ff0054, #eb122b);
             transition: .5s;
             color: whitesmoke;
         }
@@ -319,7 +320,7 @@
         </p>
     </div>
 
-    <div class="card mb-3">
+    <div class="card mb-3" id="card1">
         <div class="row no-gutters">
             <div class="col-md-4">
                 <img src="img/pic4.png" class="card-img img-fluid" alt="...">
@@ -337,7 +338,7 @@
         </div>
     </div>
 
-    <div class="card mb-3">
+    <div class="card mb-3" id="card2">
         <div class="row no-gutters">
 
             <div class="col-md-8">
@@ -359,7 +360,7 @@
     </div>
 
 
-    <div class="card mb-3">
+    <div class="card mb-3" id="card3">
         <div class="row no-gutters">
             <div class="col-md-4">
                 <img src="img/pic5.jpg" class="card-img img-fluid" alt="...">
@@ -499,6 +500,66 @@
     //     $("#log").html("LoveCare");
 
     // })
+
+    $("#card1").mouseenter(function() {
+        $("#card1").css({
+                "background-color": "beige",
+                "box-shadow": "10px 10px 10px lightblue"
+            }
+
+        )
+    })
+    $("#card1").mouseleave(function() {
+        $("#card1").css({
+                "background-color": "white",
+                "box-shadow": "10px 10px 10px pink"
+            }
+
+        )
+    })
+
+
+    $("#card2").mouseenter(function() {
+        $("#card2").css({
+                "background-color": "beige",
+                "box-shadow": "10px 10px 10px lightblue"
+            }
+
+        )
+    })
+    $("#card2").mouseleave(function() {
+        $("#card2").css({
+                "background-color": "white",
+                "box-shadow": "10px 10px 10px pink"
+            }
+
+        )
+    })
+
+
+    $("#card3").mouseenter(function() {
+        $("#card3").css({
+                "background-color": "beige",
+                "box-shadow": "10px 10px 10px lightblue"
+            }
+
+        )
+    })
+    $("#card3").mouseleave(function() {
+        $("#card3").css({
+                "background-color": "white",
+                "box-shadow": "10px 10px 10px pink"
+            }
+
+        )
+    })
+
+    $(".jumbo1").mouseenter(function() {
+        $(".text1").css({
+            "box-shadow": "10px 10px 10px plum"
+
+        })
+    })
 </script>
 
 <script>
