@@ -9,12 +9,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>LoveCARE</title>
     <link rel="stylesheet" href="footer.css">
     <script type="text/javascript">
         function scaleUp(obj, size) {
             obj.style.fontSize = size;
         }
+        setInterval(scaleUp, 50);
     </script>
     <style>
         * {
@@ -54,7 +55,7 @@
         
         .jumbo1 {
             box-shadow: 10px 10px 10px palevioletred;
-            margin: 10px;
+            margin: 6% 1% 0;
         }
         
         .img {
@@ -250,14 +251,16 @@
         <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
-        <label onmouseover="scaleUp(this,'50px')" onmouseout="scaleUp(this,'40px')" class="logo">WeCARE</label>
+        <label onmouseover="scaleUp(this,'50px')" onmouseout="scaleUp(this,'40px')" class="logo" id="log">LoveCARE <span id="span"> 
+            
+        </span></label>
         <ul>
             <li><a class="active nava" href="index.html" style="text-decoration: none;">Home</a></li>
             <li><a href="ngopages/HelpAgeIndia.html" class="nava" style="text-decoration: none;">NGOs</a></li>
             <li><a href="blog/blog.html" class="nava" style="text-decoration: none;">Blog</a></li>
             <li><a href="cart/shoppingindex.html" class="nava" style="text-decoration: none;">Products(Covid)</a></li>
             <li><a href="payment.html" class="nava" style="text-decoration: none;">Donate</a></li>
-            <li><a href="#fact" class="nava" id="reach" style="text-decoration: none;">Reach</a></li>
+            <li><a href="#fact" class="nava" id="reach" style="text-decoration: none;" onclick="fn5()">Reach</a></li>
             <li><a href="signlog.html" class="nava" style="text-decoration: none;">SignUp/Login </a></li>
 
 
@@ -386,29 +389,28 @@
                         <br></p>
 
                     <div class="info">
-                        <h1>25+</h1>
+                        <h1 class="counter" data-target="500">0</h1>
+                        <h4>Connections</h4>
+                    </div>
+                    <div class="vLine"></div>
+                    <div class="info">
+                        <h1 class="counter" data-target="400">0</h1>
                         <h4>Projects</h4>
                     </div>
                     <div class="vLine"></div>
                     <div class="info">
-                        <h1>400+</h1>
-                        <h4>Projects</h4>
-                    </div>
-                    <div class="vLine"></div>
-                    <div class="info">
-                        <h1>2500+</h1>
+                        <h1 class="counter" data-target="2500">0</h1>
                         <h4>Villages and slums</h4>
                     </div>
                 </div>
 
                 <div class="col-md-6 img-responsive img-fluid">
                     <div class="image img-fluid img-responsive">
-                        <img class="img" src="img/map.png" alt="indiamap"></div>
+                        <img class="img" src="img/map.png" alt="indiamap" id="map"></div>
                 </div>
             </div>
         </div>
     </div>
-
 
 
     <footer>
@@ -435,6 +437,7 @@
                     <a href="#"><i class="fa fa-twitter"></i></a>
                     <a href="#"><i class="fa fa-linkedin"></i></a>
                     <a href="#"><i class="fa fa-github"></i></a>
+                    <!-- <a href="#"><i class="fa fa-github"></i></a> -->
 
                 </div>
 
@@ -463,6 +466,7 @@
 
 
 
+
     <!--End of Tawk.to Script-->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -473,8 +477,63 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $("#reach").click(function() {
-        $("#fact").slideUp(2000).slideDown(3000);
+        $("#map").slideUp(2000).slideDown(2000);
     })
+
+    var flag = true;
+    $("#log").mouseenter(function() {
+        if (flag) {
+            $("#log").hide(1000).show(1000);
+            flag = false;
+        }
+    })
+    $("#log").click(function() {
+        $("#log").html("Welcome To LoveCare");
+    })
+    $("#log").dblclick(function() {
+        $("#log").html("LoveCare");
+    })
+
+    // $("#log").mouseleave(function() {
+    //     $("#log").show(1000);
+    //     $("#log").html("LoveCare");
+
+    // })
+</script>
+
+<script>
+    function fn5() {
+
+        const counters = document.querySelectorAll('.counter');
+        const speed = 100; // The lower the slower
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+
+                // Lower inc to slow and higher to slow
+                const inc = target / speed;
+
+                // console.log(inc);
+                // console.log(count);
+
+                // Check if target is reached
+                if (count < target) {
+                    // Add inc to count and output in counter
+                    counter.innerText = count + inc;
+                    // Call function every ms
+                    setTimeout(updateCount, 50);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            updateCount();
+        });
+    }
+
+    setTimeout(fn5, 1000);
 </script>
 
 </html>
