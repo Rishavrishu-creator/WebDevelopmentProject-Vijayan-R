@@ -10,222 +10,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <title>LoveCARE</title>
-    <link rel="stylesheet" href="footer.css">
-    <script type="text/javascript">
-        function scaleUp(obj, size) {
-            obj.style.fontSize = size;
-        }
-        setInterval(scaleUp, 50);
-    </script>
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        .disp {
-            text-align: center;
-            font-family: auto;
-        }
-        
-        .text1 {
-            text-align: center;
-            background-color: antiquewhite;
-            /* color: red; */
-            font-size: 25px;
-            /* box-shadow: 10px 10px 10px pink; */
-            font-family: cursive;
-        }
-        
-        .card {
-            width: 98%;
-            height: 20em;
-            padding: 10px 10px;
-        }
-        
-        .card-img {
-            height: 313px;
-            padding: 5px 0px;
-            margin: 1px -7px;
-        }
-        
-        .jumbo1 {
-            box-shadow: 10px 10px 10px palevioletred;
-            margin: 6% 1% 0;
-        }
-        
-        .img {
-            position: absolute;
-            top: -185px;
-            height: 600px;
-            width: 100%;
-        }
-        
-        .vLine {
-            display: inline-block;
-            border-left: 6px solid yellowgreen;
-            height: 76px;
-            margin-left: 5%;
-        }
-        
-        .info {
-            display: inline-block;
-        }
-        
-        .jumbo2 {
-            width: 100%;
-            /* height: 355px; */
-            height: auto;
-            margin: 118px -4px;
-            padding: 60px;
-            border-radius: 50px;
-        }
-        
-        nav {
-            background-image: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.11) 0px, rgba(0, 0, 0, 0.11) 12px, rgba(1, 1, 1, 0.16) 12px, rgba(1, 1, 1, 0.16) 24px, rgba(0, 0, 0, 0.14) 24px, rgba(0, 0, 0, 0.14) 36px, rgba(0, 0, 0, 0.23) 36px, rgba(0, 0, 0, 0.23) 48px, rgba(0, 0, 0, 0.12) 48px, rgba(0, 0, 0, 0.12) 60px, rgba(1, 1, 1, 0.07) 60px, rgba(1, 1, 1, 0.07) 72px, rgba(0, 0, 0, 0.21) 72px, rgba(0, 0, 0, 0.21) 84px, rgba(0, 0, 0, 0.24) 84px, rgba(0, 0, 0, 0.24) 96px, rgba(1, 1, 1, 0.23) 96px, rgba(1, 1, 1, 0.23) 108px, rgba(1, 1, 1, 0.07) 108px, rgba(1, 1, 1, 0.07) 120px, rgba(0, 0, 0, 0.01) 120px, rgba(0, 0, 0, 0.01) 132px, rgba(1, 1, 1, 0.22) 132px, rgba(1, 1, 1, 0.22) 144px, rgba(1, 1, 1, 0.24) 144px, rgba(1, 1, 1, 0.24) 156px, rgba(0, 0, 0, 0) 156px, rgba(0, 0, 0, 0) 168px, rgba(0, 0, 0, 0.12) 168px, rgba(0, 0, 0, 0.12) 180px), repeating-linear-gradient(90deg, rgba(1, 1, 1, 0.01) 0px, rgba(1, 1, 1, 0.01) 12px, rgba(1, 1, 1, 0.15) 12px, rgba(1, 1, 1, 0.15) 24px, rgba(0, 0, 0, 0.09) 24px, rgba(0, 0, 0, 0.09) 36px, rgba(0, 0, 0, 0.02) 36px, rgba(0, 0, 0, 0.02) 48px, rgba(0, 0, 0, 0.1) 48px, rgba(0, 0, 0, 0.1) 60px, rgba(1, 1, 1, 0.07) 60px, rgba(1, 1, 1, 0.07) 72px, rgba(1, 1, 1, 0.15) 72px, rgba(1, 1, 1, 0.15) 84px, rgba(0, 0, 0, 0.18) 84px, rgba(0, 0, 0, 0.18) 96px, rgba(1, 1, 1, 0.15) 96px, rgba(1, 1, 1, 0.15) 108px, rgba(1, 1, 1, 0.09) 108px, rgba(1, 1, 1, 0.09) 120px, rgba(1, 1, 1, 0.07) 120px, rgba(1, 1, 1, 0.07) 132px, rgba(1, 1, 1, 0.05) 132px, rgba(1, 1, 1, 0.05) 144px, rgba(0, 0, 0, 0.1) 144px, rgba(0, 0, 0, 0.1) 156px, rgba(1, 1, 1, 0.18) 156px, rgba(1, 1, 1, 0.18) 168px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.24) 0px, rgba(0, 0, 0, 0.24) 16px, rgba(1, 1, 1, 0.06) 16px, rgba(1, 1, 1, 0.06) 32px, rgba(0, 0, 0, 0.16) 32px, rgba(0, 0, 0, 0.16) 48px, rgba(1, 1, 1, 0) 48px, rgba(1, 1, 1, 0) 64px, rgba(1, 1, 1, 0.12) 64px, rgba(1, 1, 1, 0.12) 80px, rgba(1, 1, 1, 0.22) 80px, rgba(1, 1, 1, 0.22) 96px, rgba(0, 0, 0, 0.24) 96px, rgba(0, 0, 0, 0.24) 112px, rgba(0, 0, 0, 0.25) 112px, rgba(0, 0, 0, 0.25) 128px, rgba(1, 1, 1, 0.12) 128px, rgba(1, 1, 1, 0.12) 144px, rgba(0, 0, 0, 0.18) 144px, rgba(0, 0, 0, 0.18) 160px, rgba(1, 1, 1, 0.03) 160px, rgba(1, 1, 1, 0.03) 176px, rgba(1, 1, 1, 0.1) 176px, rgba(1, 1, 1, 0.1) 192px), repeating-linear-gradient(135deg, rgba(1, 1, 1, 0.18) 0px, rgba(1, 1, 1, 0.18) 3px, rgba(0, 0, 0, 0.09) 3px, rgba(0, 0, 0, 0.09) 6px, rgba(0, 0, 0, 0.08) 6px, rgba(0, 0, 0, 0.08) 9px, rgba(1, 1, 1, 0.05) 9px, rgba(1, 1, 1, 0.05) 12px, rgba(0, 0, 0, 0.01) 12px, rgba(0, 0, 0, 0.01) 15px, rgba(1, 1, 1, 0.12) 15px, rgba(1, 1, 1, 0.12) 18px, rgba(0, 0, 0, 0.05) 18px, rgba(0, 0, 0, 0.05) 21px, rgba(1, 1, 1, 0.16) 21px, rgba(1, 1, 1, 0.16) 24px, rgba(1, 1, 1, 0.07) 24px, rgba(1, 1, 1, 0.07) 27px, rgba(1, 1, 1, 0.23) 27px, rgba(1, 1, 1, 0.23) 30px, rgba(0, 0, 0, 0.2) 30px, rgba(0, 0, 0, 0.2) 33px, rgba(0, 0, 0, 0.18) 33px, rgba(0, 0, 0, 0.18) 36px, rgba(1, 1, 1, 0.12) 36px, rgba(1, 1, 1, 0.12) 39px, rgba(1, 1, 1, 0.13) 39px, rgba(1, 1, 1, 0.13) 42px, rgba(1, 1, 1, 0.2) 42px, rgba(1, 1, 1, 0.2) 45px, rgba(1, 1, 1, 0.18) 45px, rgba(1, 1, 1, 0.18) 48px, rgba(0, 0, 0, 0.2) 48px, rgba(0, 0, 0, 0.2) 51px, rgba(1, 1, 1, 0) 51px, rgba(1, 1, 1, 0) 54px, rgba(0, 0, 0, 0.03) 54px, rgba(0, 0, 0, 0.03) 57px, rgba(1, 1, 1, 0.06) 57px, rgba(1, 1, 1, 0.06) 60px, rgba(1, 1, 1, 0) 60px, rgba(1, 1, 1, 0) 63px, rgba(0, 0, 0, 0.1) 63px, rgba(0, 0, 0, 0.1) 66px, rgba(1, 1, 1, 0.19) 66px, rgba(1, 1, 1, 0.19) 69px), linear-gradient(90deg, rgb(239, 53, 115), rgb(79, 2, 93));
-        }
-        
-        * {
-            padding: 0;
-            margin: 0;
-            text-decoration: none;
-            list-style: none;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: montserrat;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-        
-        nav {
-            /* background: #000000; */
-            height: 80px;
-            width: 100%;
-        }
-        /*label.logo{
-  color: white;
-  font-size: 35px;
-  
-}*/
-        
-        nav ul {
-            float: right;
-            margin-right: 20px;
-            text-decoration: none;
-        }
-        
-        nav ul li {
-            display: inline-block;
-            line-height: 80px;
-            margin: 0 5px;
-            text-decoration: none;
-        }
-        
-        nav ul li a {
-            color: white;
-            font-size: 17px;
-            padding: 7px 13px;
-            border-radius: 3px;
-            text-transform: uppercase;
-            text-decoration: none;
-        }
-        
-        .nava.active,
-        .nava:hover {
-            /* background: #1b9bff; */
-            background-image: linear-gradient(to right top, #ff05f2, #ff00b9, #ff0083, #ff0054, #eb122b);
-            transition: .5s;
-            color: whitesmoke;
-        }
-        
-        .checkbtn {
-            font-size: 30px;
-            color: white;
-            float: right;
-            line-height: 80px;
-            margin-right: 40px;
-            cursor: pointer;
-            display: none;
-        }
-        
-        #check {
-            display: none;
-        }
-        
-        @media (max-width: 952px) {
-            label.logo {
-                font-size: 30px;
-                padding-left: 50px;
-            }
-            nav ul li a {
-                font-size: 16px;
-            }
-        }
-        
-        @media (max-width: 858px) {
-            .checkbtn {
-                display: block;
-            }
-            ul {
-                position: fixed;
-                width: 100%;
-                height: 100vh;
-                background: #2c3e50;
-                top: 80px;
-                left: -100%;
-                text-align: center;
-                transition: all .5s;
-            }
-            nav ul li {
-                display: block;
-                margin: 50px 0;
-                line-height: 30px;
-            }
-            nav ul li a {
-                font-size: 20px;
-            }
-            .nava:hover,
-            .nava.active {
-                background: none;
-                color: #0082e6;
-            }
-            #check:checked~ul {
-                left: 0;
-            }
-        }
-        
-        section {
-            background: url(bg1.jpg) no-repeat;
-            background-size: cover;
-            height: calc(100vh - 80px);
-        }
-        
-        label.logo {
-            font-size: 35px;
-            /* color: chartreuse; */
-            background-size: 42px 42px;
-            color: cornsilk;
-            /* -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent; */
-            line-height: 80px;
-            padding: 0 100px;
-            font-weight: bold;
-        }
-        
-        .card {
-            box-shadow: 10px 10px 10px pink;
-            margin: 50px 20px;
-            padding: 5px 20px;
-            border: 2px solid plum;
-            height: auto;
-        }
-    </style>
+    <!-- <link rel="stylesheet" href="footer.css"> -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
 
 </head>
 <!--Start of Tawk.to Script-->
@@ -252,7 +42,7 @@
         <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
-        <label onmouseover="scaleUp(this,'50px')" onmouseout="scaleUp(this,'40px')" class="logo" id="log">LoveCARE <span id="span"> 
+        <label onmouseover="scaleUp(this,'50px')" onmouseout="scaleUp(this,'40px')" class="logo" id="log">WeCARE <span id="span"> 
             
         </span></label>
         <ul>
@@ -421,25 +211,25 @@
 
         <div class="footer-left">
 
-            <h3>Company<span>logo</span></h3>
+            <h3>We<span>CARE</span></h3>
 
             <p class="footer-links">
-                <a href="#">Home</a> ·
-                <a href="#">Blog</a> ·
+                <a href="index.html">Home</a> ·
+                <a href="blog.html">Blog</a> ·
                 <a href="#">Pricing</a> ·
-                <a href="#">About</a> ·
+                <a href="HelpAgeIndia.html">About</a> ·
                 <a href="#">Faq</a> ·
                 <a href="#">Contact</a>
             </p>
 
-            <p class="footer-company-name">Company Name © 2020</p>
+            <p class="footer-company-name">WeCARE © 2020</p>
 
             <div class="footer-icons">
 
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/"><i class="fa fa-github"></i></a>
 
             </div>
 
@@ -449,12 +239,11 @@
 
             <p>Contact Us</p>
 
-            <form action="#" method="post">
+            <form onsubmit="return validate()" action="#" method="GET">
 
-                <input type="text" name="email" placeholder="Email">
-                <textarea name="message" placeholder="Message"></textarea>
+                <input id="text1" type="email" name="Email" placeholder="Email" required>
+                <textarea name="message" placeholder="Message" required></textarea>
                 <button>Send</button>
-
 
             </form>
 
@@ -462,9 +251,6 @@
 
     </footer>
     <script src="https://kit.fontawesome.com/0d7735c391.js" crossorigin="anonymous"></script>
-
-
-
 
 
 
@@ -477,126 +263,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script>
-        $("#reach").click(function() {
-            $("#map").slideUp(2000).slideDown(2000);
-        })
 
-        var flag = true;
-        $("#log").mouseenter(function() {
-            if (flag) {
-                $("#log").hide(1000).show(1000);
-                flag = false;
-            }
-        })
-        $("#log").click(function() {
-            $("#log").html("Welcome To LoveCare");
-        })
-        $("#log").dblclick(function() {
-            $("#log").html("LoveCare");
-        })
-
-        // $("#log").mouseleave(function() {
-        //     $("#log").show(1000);
-        //     $("#log").html("LoveCare");
-
-        // })
-
-        $("#card1").mouseenter(function() {
-            $("#card1").css({
-                    "background-color": "beige",
-                    "box-shadow": "10px 10px 10px lightblue"
-                }
-
-            )
-        })
-        $("#card1").mouseleave(function() {
-            $("#card1").css({
-                    "background-color": "white",
-                    "box-shadow": "10px 10px 10px pink"
-                }
-
-            )
-        })
-
-
-        $("#card2").mouseenter(function() {
-            $("#card2").css({
-                    "background-color": "beige",
-                    "box-shadow": "10px 10px 10px lightblue"
-                }
-
-            )
-        })
-        $("#card2").mouseleave(function() {
-            $("#card2").css({
-                    "background-color": "white",
-                    "box-shadow": "10px 10px 10px pink"
-                }
-
-            )
-        })
-
-
-        $("#card3").mouseenter(function() {
-            $("#card3").css({
-                    "background-color": "beige",
-                    "box-shadow": "10px 10px 10px lightblue"
-                }
-
-            )
-        })
-        $("#card3").mouseleave(function() {
-            $("#card3").css({
-                    "background-color": "white",
-                    "box-shadow": "10px 10px 10px pink"
-                }
-
-            )
-        })
-
-        $(".jumbo1").mouseenter(function() {
-            $(".text1").css({
-                "box-shadow": "10px 10px 10px plum"
-
-            })
-        })
-    </script>
-
-    <script>
-        function fn5() {
-
-            const counters = document.querySelectorAll('.counter');
-            const speed = 100; // The lower the slower
-
-            counters.forEach(counter => {
-                const updateCount = () => {
-                    const target = +counter.getAttribute('data-target');
-                    const count = +counter.innerText;
-
-                    // Lower inc to slow and higher to slow
-                    const inc = target / speed;
-
-                    // console.log(inc);
-                    // console.log(count);
-
-                    // Check if target is reached
-                    if (count < target) {
-                        // Add inc to count and output in counter
-                        counter.innerText = count + inc;
-                        // Call function every ms
-                        setTimeout(updateCount, 50);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-
-                updateCount();
-            });
-        }
-
-        setTimeout(fn5, 1000);
-    </script>
 </body>
 
 </html>
