@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,30 +11,119 @@
 
     <link rel="stylesheet" type="text/css" href="paymentStyles.css">
     <title>Payment Page</title>
-  </head>
-  <body>
-  	
-	  	<nav class="navbar navbar-light">
-	  	<span class="navbar-brand mb-0 h1">HOME</span>
-		</nav>
-	<div class="container">
-			<img src="donation.jpg" class="img-fluid">
-		<div class="row">	
-			<div class="left col-9">
-				<form>
-					<div class="form-group row">
-				    <label for="inputAmount3" class="col-sm-3 col-form-label">Amount:</label>
-				    <div class="col-sm-9">
-				      <input type="text" class="form-control" id="inputAmount3">
-				    </div>
-				  </div>
-				  <div class= "form-group row" id="dob" style="">
-				      <label class="col-sm-3 control-label">
+    <script type="text/javascript">
+        function validate() {
+            var Amount = document.getElementById("inputAmount3").value;
+            var regx = /^[1-9][0-9]+$/;
+            var Name = document.getElementById("inputName").value;
+            var regx1 = /^[a-zA-Z ]+[a-zA-Z]+$/;
+            var email = document.getElementById("inputEmail3").value;
+            var regx2 = /^([a-zA-z0-9\.-]+)@([a-z0-9\-]+).([a-z]{2,10})(.[a-z]{2,5})?$/;
+            var mobile = document.getElementById("inputMobile").value;
+            var regx3 = /^[6-9][0-9]{9}$/;
+            var address = document.getElementById("inputAddress").value;
+            var regx4 = /^[a-zA-Z0-9\s,'-]*$/;
+            var address1 = document.getElementById("inputAddress2").value;
+            var regx5 = /^[a-zA-Z0-9\s,'-]*$/;
+            var city1 = document.getElementById("inputCity").value;
+            var regx6 = /^[a-zA-Z]+$/;
+            var zip1 = document.getElementById("inputZip").value;
+            var regx7 = /^[1-9][0-9]{5}$/;
+
+
+            if (regx.test(Amount) && regx1.test(Name) && regx2.test(email) && regx3.test(mobile) && regx4.test(address) && regx5.test(address1) && regx6.test(city1) && regx7.test(zip1)) {
+                alert("Valid Details");
+
+            } else {
+                alert("Invalid Details");
+
+            }
+            if (regx.test(Amount) == false) {
+                inputAmount3.style.border = "solid 2px red";
+
+            } else {
+                inputAmount3.style.border = "solid 2px green";
+            }
+            if (regx1.test(Name) == false) {
+                inputName.style.border = "solid 2px red";
+
+            } else {
+                inputName.style.border = "solid 2px green";
+            }
+            if (regx2.test(email) == false) {
+                inputEmail3.style.border = "solid 2px red";
+
+            } else {
+                inputEmail3.style.border = "solid 2px green";
+            }
+            if (regx3.test(mobile) == false) {
+                inputMobile.style.border = "solid 2px red";
+
+            } else {
+                inputMobile.style.border = "solid 2px green";
+            }
+            if (regx4.test(address) == false) {
+                inputAddress.style.border = "solid 2px red";
+
+            } else {
+                inputAddress.style.border = "solid 2px green";
+            }
+            if (regx5.test(address1) == false) {
+                inputAddress2.style.border = "solid 2px red";
+
+            } else {
+                inputAddress2.style.border = "solid 2px green";
+            }
+            if (regx6.test(city1) == false) {
+                inputCity.style.border = "solid 2px red";
+
+            } else {
+                inputCity.style.border = "solid 2px green";
+            }
+            if (regx7.test(zip) == false) {
+                inputZip.style.border = "solid 2px red";
+
+            } else {
+                inputZip.style.border = "solid 2px green";
+            }
+
+
+
+        }
+    </script>
+
+    <style>
+        .home:hover {
+            /* background-color: blanchedalmond; */
+            background-color: yellow;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light">
+        <a href="/index.html"> <span class="navbar-brand mb-0 h1 home">HOME</span></a>
+    </nav>
+    <div class="container">
+        <img src="donation.jpg" class="img-fluid">
+        <div class="row">
+            <div class="left col-9">
+                <form>
+                    <div class="form-group row">
+                        <label for="inputAmount3" class="col-sm-3 col-form-label">Amount:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="inputAmount3">
+                        </div>
+                    </div>
+                    <div class="form-group row" id="dob">
+                        <label class="col-sm-3 control-label">
 				          <span id="dob2">D.O.B (dd/mm/yyyy)</span>
 				          
 				      </label>
-				      <div class="col-sm-9">
-				          <select name="date" id="date" class="sosInline form-control">
+                        <div class="col-sm-9">
+                            <select name="date" id="date" class="sosInline form-control" required="">
 				  		<option value="-1" selected="selected">Day</option>
 				  		<option value="1">1</option>
 				  		<option value="2">2</option>
@@ -68,7 +158,7 @@
 				  		<option value="31">31</option>
 
 				  	</select>
-				          <select name="month" id="month" class="sosInline form-control">
+                            <select name="month" id="month" class="sosInline form-control" required="">
 				  		<option value="-1" selected="selected">Month</option>
 				  		<option value="1">1</option>
 				  		<option value="2">2</option>
@@ -84,8 +174,8 @@
 				  		<option value="12">12</option>
 
 				  	</select>
-				          
-				          <select name="year" id="year" class="sosInline form-control">
+
+                            <select name="year" id="year" class="sosInline form-control" required="">
 				  		<option value="-1" selected="selected">Year</option>
 				  		<option value="2002">2002</option>
 				  		<option value="2001">2001</option>
@@ -171,82 +261,83 @@
 				  		<option value="1921">1921</option>
 
 				  	</select><br>
-				          <div id="" class="help-block " style="display:none;"><span class="ValidatorMessageClass" style=""><a></a></span></div>
-				      </div>
-				  </div>
+                            <div id="" class="help-block " style="display:none;"><span class="ValidatorMessageClass"><a></a></span></div>
+                        </div>
+                    </div>
 
-				  <div class="form-group row">
-				    <label for="inputName" class="col-sm-3 col-form-label">Name:</label>
-				    <div class="col-sm-9">
-				      <input type="text" class="form-control" id="inputName">
-				    </div>
-				  </div>
-				  <div class="form-group row">
-				    <label for="inputEmail3" class="col-sm-3 col-form-label">Email:</label>
-				    <div class="col-sm-9">
-				      <input type="email" class="form-control" id="inputEmail3">
-				    </div>
-				  </div>
-				  
-				  <fieldset class="form-group">
-				    <div class="row">
-				      <legend class="col-form-label col-sm-3 pt-0">Mode of Payment</legend>
-				      <div class="col-sm-9">
-				        <div class="form-check">
-				          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-				          <label class="form-check-label" for="gridRadios1">
+                    <div class="form-group row">
+                        <label for="inputName" class="col-sm-3 col-form-label">Name:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="inputName">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-3 col-form-label">Email:</label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" id="inputEmail3">
+                        </div>
+                    </div>
+
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <legend class="col-form-label col-sm-3 pt-0">Mode of Payment</legend>
+                            <div class="col-sm-9">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                    <label class="form-check-label" for="gridRadios1">
 				            Credit Card
 				          </label>
-				        </div>
-				        <div class="form-check">
-				          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-				          <label class="form-check-label" for="gridRadios2">
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                    <label class="form-check-label" for="gridRadios2">
 				            Net Banking
 				          </label>
-				        </div>
-				        <div class="form-check disabled">
-				          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-				          <label class="form-check-label" for="gridRadios3">
+                                </div>
+                                <div class="form-check disabled">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                                    <label class="form-check-label" for="gridRadios3">
 				            Paytm
 				          </label>
-				        </div>
-				      </div>
-				    </div>
-				    <div class="form-group row">
-				    <label for="inputMobile" class="col-sm-3 col-form-label">Phone no:</label>
-				    <div class="col-sm-9">
-				      <input type="text" class="form-control" id="inputMobile">
-				    </div>
-				  </div>
-				    <div class="form-group row">
-				        <label for="inputAddress" class="col-sm-3">Address</label>
-				        <div class="col-sm-9">
-				        <input type="text" class="form-control " id="inputAddress" placeholder="1234 Main St">
-				      </div>
-				  </div>
-				      <div class="form-group row">
-				        <label for="inputAddress2" class="col-sm-3">Address 2</label>
-				        <div class="col-sm-9">
-				        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-				      </div></div>
-				      <div class="form-row">
-				        <div class="form-group col-md-6">
-				          <label for="inputCity">City</label>
-				          <input type="text" class="form-control" id="inputCity">
-				        </div>
-				        <div class="form-group col-md-4">
-				          <label for="inputState">State</label>
-				          <select id="inputState" class="form-control">
-				            <option selected>Choose...</option>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputMobile" class="col-sm-3 col-form-label">Phone no:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="inputMobile">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputAddress" class="col-sm-3">Address</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control " id="inputAddress" placeholder="1234 Main St">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputAddress2" class="col-sm-3">Address 2</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="inputAddress2" placeholder="(Optional) Apartment, studio, or floor">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputCity">City</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputState">State</label>
+                                <select id="inputState" class="form-control" required="">
+				            <option selected >Choose...</option>
 				            <option>...</option>
 				          </select>
-				        </div>
-				        <div class="form-group col-md-2">
-				          <label for="inputZip">Zip</label>
-				          <input type="text" class="form-control" id="inputZip">
-				        </div>
-				      </div>
-				      <!-- <div class="form-group">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="inputZip">Zip</label>
+                                <input type="text" class="form-control" id="inputZip">
+                            </div>
+                        </div>
+                        <!-- <div class="form-group">
 				        <div class="form-check">
 				          <input class="form-check-input" type="checkbox" id="gridCheck">
 				          <label class="form-check-label" for="gridCheck">
@@ -254,42 +345,42 @@
 				          </label>
 				        </div>
 				      </div> -->
-				      
-				  </fieldset>
-				  <div class="form-group row">
-				    <div class="col-sm-2"></div>
-				    <div class="col-sm-10">
-				      <div class="form-check">
-				        <input class="form-check-input" type="checkbox" id="gridCheck1">
-				        <label class="form-check-label" for="gridCheck1">
+
+                    </fieldset>
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                <label class="form-check-label" for="gridCheck1">
 				          I allow SOS Children's Villages of India to contact me/us for regular updates and other relevant information from time to time
 				        </label>
-				      </div>
-				    </div>
-				  </div>
-				  <div class="form-group row">
-				    <div class="col-sm-10">
-				      <button type="submit" class="btn btn-primary">Pay Now</button>
-				    </div>
-				  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button onclick="validate()" type="button" class="btn btn-primary">Pay Now</button>
+                        </div>
+                    </div>
 
-				</form>
+                </form>
 
-			</div>
-			<div class="right col-3">
-				<div class="box">
-					<img src="info.jpg" class="img-fluid info">
-					<p>Only 4% elders have access to internet in India.
-Digitally Literacy📲 is need of the hour! If we do not provide technology access & training to elders, we shut them out from access to basic services & society, worsening trend of isolation among the elderly. Social loneliness & seclusion has a negative impact on the lives of elders, affecting their emotional welfare.</p>
-<p>
-You can help #empowerelders, by providing them access to technology and sharing your #digital knowledge with them👵📱👴</p>
-				</div>
-			</div>
-		</div>
-	</div>
+            </div>
+            <div class="right col-3">
+                <div class="box">
+                    <img src="info.jpg" class="img-fluid info">
+                    <p>Only 4% elders have access to internet in India. Digitally Literacy📲 is need of the hour! If we do not provide technology access & training to elders, we shut them out from access to basic services & society, worsening trend of isolation
+                        among the elderly. Social loneliness & seclusion has a negative impact on the lives of elders, affecting their emotional welfare.</p>
+                    <p>
+                        You can help #empowerelders, by providing them access to technology and sharing your #digital knowledge with them👵📱👴</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-  	
-    
+
+
 
 
 
@@ -305,5 +396,6 @@ You can help #empowerelders, by providing them access to technology and sharing 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  </body>
+</body>
+
 </html>
